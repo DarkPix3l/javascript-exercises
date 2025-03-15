@@ -11,26 +11,57 @@
     <!-- this time inline -->
     <p>JavaScript Basics Part 2</p>
     <script>
-    /* Practice 1 */
+        /* Practice 1 */
 
         /* first attempt */
-/*                 const arry = [1,2,3,4];
-                function firstElements(arr, n) {
-                    return arr, n;
-                } 
-                
-                console.log(firstElements(arry, arry[0])) */
+        /*                 const arry = [1,2,3,4];
+                        function firstElements(arr, n) {
+                            return arr, n;
+                        } 
+                        
+                        console.log(firstElements(arry, arry[0])) */
         /* second attempt */
         function firstElements(arr, n) {
             return arr.slice(0, n);
         }
-        console.log(firstElements([1, 2, 3, 4], 1)) // 1
-        console.log(firstElements([1, 2, 3, 4], 3)) // [1, 2, 3]
+        console.log(firstElements([1, 2, 3, 4], 1)); // 1
+        console.log(firstElements([1, 2, 3, 4], 3)); // [1, 2, 3]
 
         /* Practice 2 */
         /* IDK */
 
 
+        /* Practice 3 */
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+        function productOfArray(sum, num) {
+            return sum + num;
+        }
+
+        /* Practice 4 */
+        function myfunc() {
+            const totalSum = arr.reduce(productOfArray, 0);
+            console.log("Sum:", totalSum);
+        }
+        myfunc();
+
+
+        function removeNonIntegers(array) {
+            return array.filter(Number.isInteger);
+        }
+
+        console.log(removeNonIntegers([1, 2, 3])); // [1, 2, 3]
+        console.log(removeNonIntegers([1, true, NaN, "a", 10])); // [1, 10]
+        console.log(removeNonIntegers([3.5, 7, "hello", 42, null])); // [7, 42]
+
+        /* Practice 5 */
+        
+        //array.splice(start, deleteCount, item1, item2, ..., itemN);
+        function insert(ele1, ele2){
+            const str = [ele1, ele2];
+            return str.splice(0,1);
+  
+        }console.log(insert('We are doing some exercises.','JavaScript '))
 
     </script>
 </body>
